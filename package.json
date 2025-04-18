@@ -1,0 +1,46 @@
+{
+  "name": "causality-error",
+  "version": "0.0.1",
+  "description": "Go-like errors.Is utility for JavaScript/TypeScript",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "prepublishOnly": "pnpm test && pnpm build"
+  },
+  "keywords": [
+    "error",
+    "errors",
+    "golang",
+    "errors.is",
+    "typescript"
+  ],
+  "author": "mkusaka",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkusaka/causality-error.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkusaka/causality-error/issues"
+  },
+  "homepage": "https://github.com/mkusaka/causality-error#readme",
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
+  }
+}
