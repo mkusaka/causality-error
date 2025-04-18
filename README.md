@@ -41,7 +41,9 @@ if (is(wrappedError, specificError)) {
 const fsError = Object.assign(new Error('file not found'), { code: 'ENOENT' });
 const wrappedFsError = new Error('operation failed', { cause: fsError });
 
-if (is(wrappedFsError, e => (e as any).code === 'ENOENT')) {
+if (is(wrappedFsError, (e: unknown) => {
+  return typeof e === 'object' && e !== null && 'code' in e && (e as { code: string }).code === 'ENOENT';
+})) {
   console.log('Found a file not found error');
 }
 
