@@ -1,6 +1,6 @@
 {
   "name": "causality-error",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Go-like errors.Is utility for JavaScript/TypeScript",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
